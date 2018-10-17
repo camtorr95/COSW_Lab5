@@ -1,5 +1,7 @@
 package eci.cosw.data.model;
 
+import org.springframework.data.annotation.Id;
+
 public class User {
 
     private String name;

@@ -10,7 +10,7 @@ public class Todo {
 
     private Date dueDate;
 
-    private User responsible;
+    private String responsible;
 
     private String status;
 
@@ -20,11 +20,13 @@ public class Todo {
     public Todo() {
     }
 
-    public Todo(String description,Date dueDate, User responsible) {
+    public Todo(String description, Date dueDate, String responsible, String status, String fileUrl) {
         this.description = description;
         this.priority = 5;
         this.dueDate = dueDate;
         this.responsible = responsible;
+        this.status = status;
+        this.fileUrl = fileUrl;
     }
 
     public String getDescription() {
@@ -51,11 +53,11 @@ public class Todo {
         this.dueDate = dueDate;
     }
 
-    public User getResponsible() {
+    public String getResponsible() {
         return responsible;
     }
 
-    public void setResponsible(User responsible) {
+    public void setResponsible(String responsible) {
         this.responsible = responsible;
     }
 
@@ -81,6 +83,9 @@ public class Todo {
                 "description='" + description + '\'' +
                 ", dueDate=" + dueDate +
                 ", responsible=" + responsible +
+                ", priority=" + priority +
+                ", status=" + status +
+                ", fileUrl=" + fileUrl +
                 '}';
     }
 }
